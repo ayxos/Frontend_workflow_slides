@@ -1,0 +1,589 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Frontend Refactor</h1>
+					<h3></h3>
+					<p>
+						<small>Created by <a href="http://ayxos.com">Marco A. Pajares</a> / <a href="http://github.com/cybermarkus1">gitHub</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Index</h2>
+					<ul>
+						<li><a href="#/2"> Backbone </a></li>
+						<li><a href="#/3"> Style (Sass) </a></li>
+						<li><a href="#/4"> Jasmine </a></li>
+						<li><a href="#/5"> Grunt </a></li>
+						<li><a href="#/6"> Structure </a></li>
+						<li><a href="#/7"> Creating a new app </a></li>
+						<li><a href="#/8"> Creating a new style file </a></li>
+						<li><a href="#/9"> Creating a new test file  </a></li>
+						<li><a href="#/10"> Creating new Doc </a></li>
+						<li><a href="#/11"> Grunt task </a></li>
+					</ul>
+				</section>
+
+				<!-- Backbone -->
+				<section data-background="#4162a8">
+				
+					<section>
+						<h2>Why use Backbone? </h2>
+						<ul>
+							<li>We really need <c>MVC</c> for the front end. Traditional methods leave us with code that's too coupled, messy and incredibly hard to maintain.</li>
+							<li><c>Storing data and state in the DOM is a bad idea.</c> This started making more sense after creating apps that needed different parts of the app to be updated with the same data.</li>
+							<li><c>Fat models and skinny controllers</c> are the way to go. Workflow is simplified when business logic is taken care of by models.</li>
+							<li><c>Templating is an absolute necessity.</c> Putting HTML inside your JavaScript gives you bad karma.</li>
+						</ul>
+						<small>see more at: <a href="http://code.tutsplus.com/tutorials/getting-started-with-backbonejs--net-19751">tutplus</a> or <a href="http://backbonetutorials.com/"> backbone tutorials </a></small>
+						<div class="arrow animated bounce"></div>
+					</section>
+
+					<section>
+						<h2>1 - Intro to Backbone </h2>
+						<p>
+							<c>Backbone supplies structure to JavaScript-heavy applications</c> by providing models with key-value binding and custom events, collections with a rich API of enumerable functions, views with declarative event handling, and connects it all to your existing application over a RESTful JSON interface. 
+						</p>
+						<div class="arrow animated bounce"></div>
+					</section>
+
+					<section>
+						<h2>1.1 - Backbone essentials </h2>
+						<p>Backbone's core consists of four major classes:</p>
+						<ul>
+							<li>Model</li>
+							<li>Collection</li>
+							<li>View</li>
+							<li>Controller</li>
+						</ul>
+						<div class="arrow animated bounce"></div>
+					</section>
+					<section>
+						<h2>1.1.1 - Model</h2>
+						<p>In Backbone, a model represents a singular entity -- <c>a record in a database</c> if you will. But there are no hard and fast rules here. From the Backbone website:
+
+						Models are the heart of any JavaScript application, containing the interactive data as well as a large part of the logic surrounding it: conversions, validations, computed properties, and access control.
+
+						The model merely gives you a way to read and write arbitrary properties or attributes on a data set. 
+						</p>
+						<div class="arrow animated bounce"></div>
+					</section>
+					<section>
+						<h2>1.1.2 - Collection</h2>
+						<p>Collections in Backbone are essentially just a <c>collection of models.</c> Going with our database analogy from earlier, collections are the results of a query where the results consists of a number of records [models].</p>
+						<div class="arrow animated bounce"></div>
+					</section>
+					<section>
+						<h2>1.1.3 - View</h2>
+						<p>A view handles two duties fundamentally:</p>
+
+						<ul>
+							<li> <c>Listen to events</c> thrown by the DOM and models/collections.</li>
+							<li> <c>Represent</c> the application's state and data model to the user.</li>
+						</ul>
+						<a href="#/7"> Creating a new app </a>
+					</section>
+				</section>
+
+				<!-- Style (Sass) -->
+				<section data-background="hotpink">
+				
+					<section>
+						<h2>Why use Sass? </h2>
+						<p>
+							Sass is a <c>preprocessor</c> a meta-language on top of CSS that both provides a simpler, more elegant syntax for CSS and implements various features that are useful for creating manageable stylesheets.
+						</p>
+						<small>see more at: <a href="http://www.zivtech.com/blog/css-suckers-introduction-sass-compass">zivtech</a> or <a href="http://sass-lang.com/"> Sass </a></small>
+						<a href="#/8"> Creating a new style file </a>
+						<div class="arrow animated bounce"></div>
+					</section>
+
+					<section>
+						<h2> Features </h2>
+						<ul>
+							<li> Syntax </li>
+							<li> Compass </li>
+							<li> Variables </li>
+							<li> Mixins </li>
+							<li> Extends </li>
+					</section>
+				</section>
+
+				<!-- Jasmine -->
+				<section data-background="#8B008B">
+				
+					<section>
+						<h2>Why use Jasmine </h2>
+						<p>
+							Jasmine is a behavior-driven development framework for <c>testing JavaScript code.</c> It does not depend on any other JavaScript frameworks. It does not require a DOM. And it has a clean, obvious syntax so that you can easily write tests
+						</p>
+						<a href="#/9"> Testing with Jasmine </a>
+						<small>see more at: <a href="http://jasmine.github.io/2.0/introduction.html">Jasmine</a></small>
+					</section>
+				</section>
+
+				<!-- Grunt -->
+				<section data-background="#A0522D">
+				
+					<section>
+						<h2>Why use Grunt? </h2>
+						<p>
+							In one word:<c> automation</c>. The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you've configured it, a <c>task runner</c> can do most of that mundane work for you—and your team—with basically zero effort.
+						</p>
+						<a href="#/11"> List of Grunt task available </a>
+						<small>see more at: <a href="http://gruntjs.com/"> Grunt </a></small>
+
+					</section>
+				</section>
+
+				<!-- Struct -->
+				<section data-background="teal">
+				
+					<section>
+						<h2> Struct </h2>
+						<p>
+						From now on, we are going to try a new struct to develope new backbone apps like could be catalitycs or trends
+						</p>
+						<a class="image" href="img/tree.png" target="_blank">
+							<img width="35%" height="auto" src="img/tree.png" alt="Tree">
+						</a>
+						<div class="arrow animated bounce"></div>
+					</section>
+
+					<section>
+						<h2>1 - src/test </h2>
+						<p>test folder has been created to store Jasmine tests</p>
+						<div class="arrow animated bounce"></div>
+					</section>
+
+					<section>
+						<h2>1 - src/main/Resources </h2>
+						<p>
+							resources folder has been created to store documentation and style preprocess files
+						</p>
+						<ul> Contain:
+							<li>Documentation generated with Yuidoc</li>
+							<li>Style Sass files (not Css)</li>
+						</ul>
+						<div class="arrow animated bounce"></div>
+					</section>
+
+					<section>
+						<h2>1 - src/main/Webapp/js/apps </h2>
+						<p>
+							apps folder has been created to store Backbone applications
+						</p>
+					</section>
+				</section>
+
+				<!-- Creating a new app -->
+				<section data-background="navy">
+				
+					<section>
+						<h2> Backbone App </h2>
+						<p>
+							In order to create or check a new Backbone application, creator must take the following steps:
+						</p>
+						<ul>
+							<li> Router </li>
+							<li> Create Struct </li>
+							<li> BaseView </li>
+							<li> Check Require </li>
+						</ul>
+						<div class="arrow animated bounce"></div>
+					</section>
+
+					<section>
+						<h2>1 - Router </h2>
+						<p>
+							inside js/router.js file, must appear URL and METHOD
+							<pre><code data-trim contenteditable>
+								"url":"method"
+							</code></pre>
+							<ul>Important! About notation:
+								<li>URL:  must be lowercase, as specific as could be, and use underscore (_) for composite words.</li>
+								<li>methods & Backbone Apps:  must be using camelCase notation</li>
+							</ul>
+							<a class="image" href="img/route_method.png" target="_blank">
+								<img width="35%" height="auto" src="img/route_method.png" alt="Tree">
+							</a>
+							<a class="image" href="img/routes.png" target="_blank">
+								<img width="35%" height="auto" src="img/routes.png" alt="Tree">
+							</a>
+						</p>
+						<div class="arrow animated bounce"></div>
+					</section>
+
+					<section>
+						<h2>2 - Struct </h2>
+						<ul> Every Backbone App must contain the following folders:
+							<li>entities: models and collections are placed here</li>
+							<li>templates: every Jade/Handlebars must be here</li>
+							<li>views: every view must be here ATENTION! inside this folder must appear always a yourappnameBaseView.js</li>
+						</ul>
+						<a class="image" href="img/backbone_struct.png" target="_blank">
+							<img width="25%" height="auto" src="img/backbone_struct.png" alt="Tree">
+						</a>
+						<div class="arrow animated bounce"></div>
+					</section>
+
+					<section>
+						<h2>3 - BaseView</h2>
+						<p>In order to simplify create Backbone apps, inside router.js there is a method called 'load backbone' that search inside apps/yourBackboneApp/views/yourBackboneAppBaseView.js to init the app, thats why must exist a BaseView.js file
+						</p>
+						<a class="image" href="img/load.png" target="_blank">
+							<img width="65%" height="auto" src="img/load.png" alt="Tree">
+						</a>
+						<div class="arrow animated bounce"></div>
+					</section>
+
+					<section>
+						<h2>4 - RequireJs</h2>
+						<p>When maven production task start, uglify every Js code, and use requireJs to avoid ask server multiple times for the same file. To do that, require.js needs a dependencies map, wich is located on 'js/config.js' and contain every dependencies that the app has.
+						</p>
+						<a class="image" href="img/req.png" target="_blank">
+							<img width="65%" height="auto" src="img/req.png" alt="Tree">
+						</a>
+					</section>
+				</section>
+
+				<!-- Creating a new style file -->
+				<section data-background="darkorchid">
+				
+					<section>
+						<h2> Style </h2>
+						<pre><code data-trim contenteditable>
+							grunt style
+						</code></pre>
+						<p>
+							In order to create or check a style file, creator must take the following steps:
+						</p>
+						<ul>
+							<li> check deps </li>
+							<li> create a file inside /custom </li>
+							<li> link to init file </li>
+						</ul>
+						<a class="image" href="img/style.png" target="_blank">
+							<img width="35%" height="auto" src="img/style.png" alt="Tree">
+						</a>
+						<div class="arrow animated bounce"></div>
+					</section>
+
+					<section>
+						<h2>1 - check deps </h2>
+						<ul>
+							Inside resources/stylesheets folder there are two folders:
+							<li> custom: wich are located every style file made by us </li>
+							<li> vendors: wich are located every external css lib that our code need </li>
+						</ul>
+						<p> So, if you have to import external css, place it into resources/stylesheets/vendors<p>
+						<div class="arrow animated bounce"></div>
+					</section>
+
+					<section>
+						<h2>2 - create a file inside /custom </h2>
+						<p> create a file inside resources/stylesheets/custom folder and wrap it using a div</p>
+						<div class="arrow animated bounce"></div>
+					</section>
+
+					<section>
+						<h2>3 - link to init file</h2>
+						<ul>Inside resources/stylesheets folder there are two files:
+							<li> new_sytle: listed some scss file located on custom folder and use BOOTSTRAP v3 to generate new_style.css </li>
+							<li> old_sytle: listed some scss file located on custom folder and use BOOTSTRAP v2 to generate old_style.css </li>
+						</ul>
+
+					</section>
+				</section>
+
+				<!-- Creating a new test file -->
+				<section data-background="#007777">
+				
+					<section>
+						<h2>Why testing code? </h2>
+						<pre><code data-trim contenteditable>
+							grunt test
+						</code></pre>
+						<ul>
+							<li>its our proof/evidence that our code works properly</li>
+							<li>its a way to avoid future unexpected problems</li>
+							<li>run in a controlled environment</li>
+						</ul>
+						<div class="arrow animated bounce"></div>
+					</section>
+
+					<section>
+						<h2> Generating a Spec </h2>
+						<p>
+							Inside 'test/spec' are listed all tthe backbone applications that right now exist, just create another folder and using require call your new aplication and start to add tests!
+						</p>
+						<a class="image" href="img/test_tree.png" target="_blank">
+							<img width="35%" height="auto" src="img/test_tree.png" alt="Tree">
+						</a>
+						<div class="arrow animated bounce"></div>
+					</section>
+					<section>
+						<h2> Generating a Spec </h2>
+						<a class="image" href="img/test.png" target="_blank">
+							<img width="75%" height="auto" src="img/test.png" alt="Tree">
+						</a>
+
+					</section>
+				</section>
+
+				<!-- testing code and generate HTML/CSS files -->
+				<section data-background="cadetblue">
+				
+					<section>
+						<h2> Using grunt many important task has been created </h2>
+						<ul>
+							<li>Download external deps/libs using <c>Bower</c></li>
+							<li>Genarting Html files from <c>jade/handlebars</c></li>
+							<li>Generating style files from scss (<c>sass</c>)</li>
+							<li>evaluating JS code syntax using <c>JsHint</c></li>
+							<li>evaluating JS code works using <c>Jasmine</c></li>
+							<li>compress and uglify every js files in order to generate main-built using <c>requireJs</c></li>
+							<li>Generating documentation using <c>Yuidoc</c></li>
+							<li><c>Clean</c> workspace</li>
+						</ul>
+						<div class="arrow animated bounce"></div>
+					</section>
+					<section>
+						<h2> main task </h2>
+						<table>
+							<thead>
+								<tr>
+									<th> command </th>
+
+									<th> Bower </th>
+									<th> template </th>
+									<th> style </th>
+									<th> Jshint </th>
+									<th> Test </th>
+									<th> requireJs </th>
+									<th> Doc </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											grunt production
+										</code></pre>
+									</td>
+									<td class="yes"></td>
+									<td class="yes"></td>
+									<td class="yes"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="yes"></td>
+									<td class="yes"></td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											grunt bower
+										</code></pre>
+									</td>
+
+									<td class="yes"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											grunt init
+										</code></pre>
+									</td>
+
+									<td class="yes"></td>
+									<td class="yes"></td>
+									<td class="yes"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="yes"></td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											grunt
+										</code></pre>
+									</td>
+
+									<td class="no"></td>
+									<td class="yes"></td>
+									<td class="yes"></td>
+									<td class="yes"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="yes"></td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											grunt fast
+										</code></pre>
+									</td>
+									<td class="no"></td>
+									<td class="yes"></td>
+									<td class="yes"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											grunt test
+										</code></pre>
+									</td>
+
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="yes"></td>
+									<td class="yes"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											grunt style
+										</code></pre>
+									</td>
+
+									<td class="no"></td>
+									<td class="yes"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											grunt notest
+										</code></pre>
+									</td>
+
+									<td class="no"></td>
+									<td class="yes"></td>
+									<td class="yes"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="no"></td>
+									<td class="yes"></td>
+								</tr>
+							</tbody>
+						</table>
+
+					</section>
+
+				</section>
+
+				<!-- Creating a new Doc file -->
+				<section data-background="brown">
+				
+					<section>
+						<h2>Documentation </h2>
+						<p>
+							Inside 'resources/js-documentation' exist a file named 'index.html' where you could see every comment that appears on js files.
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<h1>THE END</h1>
+					<h3><a href="http://ayxos.com">BY Marco A. Pajares</a></h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+
+	</body>
+</html>
