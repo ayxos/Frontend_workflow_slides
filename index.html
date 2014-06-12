@@ -248,7 +248,7 @@
 							</code></pre>
 							<ul>Important! About notation:
 								<li>URL:  must be lowercase, as specific as could be, and use underscore (_) for composite words.</li>
-								<li>methods & Backbone Apps:  must be using camelCase notation</li>
+								<li>Methods & Backbone Apps:  must be using camelCase notation</li>
 							</ul>
 							<a class="image" href="img/route_method.png" target="_blank">
 								<img width="35%" height="auto" src="img/route_method.png" alt="Tree">
@@ -263,9 +263,9 @@
 					<section>
 						<h2>2 - Struct </h2>
 						<ul> Every Backbone App must contain the following folders:
-							<li>entities: models and collections are placed here</li>
-							<li>templates: every Jade/Handlebars must be here</li>
-							<li>views: every view must be here ATENTION! inside this folder must appear always a yourappnameBaseView.js</li>
+							<li><d>entities</d>: models and collections are placed here</li>
+							<li><d>templates</d>: every Jade/Handlebars must be here</li>
+							<li><d>views</d>: every view must be here ATENTION! inside this folder must appear always a yourappnameBaseView.js</li>
 						</ul>
 						<a class="image" href="img/backbone_struct.png" target="_blank">
 							<img width="25%" height="auto" src="img/backbone_struct.png" alt="Tree">
@@ -275,7 +275,7 @@
 
 					<section>
 						<h2>3 - BaseView</h2>
-						<p>In order to simplify create Backbone apps, inside router.js there is a method called 'load backbone' that search inside apps/yourBackboneApp/views/yourBackboneAppBaseView.js to init the app, thats why must exist a BaseView.js file
+						<p>In order to simplify create Backbone apps, inside <d>'router.js'</d> there is a method called 'load backbone' that search inside <d>'apps/yourBackboneApp/views/yourBackboneAppBaseView.js</d> to init the app, thats why <d>must exist a BaseView.js file</d>.
 						</p>
 						<a class="image" href="img/load.png" target="_blank">
 							<img width="65%" height="auto" src="img/load.png" alt="Tree">
@@ -285,7 +285,7 @@
 
 					<section>
 						<h2>4 - RequireJs</h2>
-						<p>When maven production task start, uglify every Js code, and use requireJs to avoid ask server multiple times for the same file. To do that, require.js needs a dependencies map, wich is located on 'js/config.js' and contain every dependencies that the app has.
+						<p>When maven production task start, <d>uglify</d> every Js code, and use requireJs to <d>avoid ask server multiple times for the same file</d>. To do that, require.js needs a dependencies map, wich is located on <d>'js/config.js'</d> and contain every dependencies that the app needs.
 						</p>
 						<a class="image" href="img/req.png" target="_blank">
 							<img width="65%" height="auto" src="img/req.png" alt="Tree">
@@ -305,9 +305,9 @@
 							In order to create or check a style file, creator must take the following steps:
 						</p>
 						<ul>
-							<li> check deps </li>
-							<li> create a file inside /custom </li>
-							<li> link to init file </li>
+							<li> Check deps </li>
+							<li> Create a file inside <c>'/custom'</c> </li>
+							<li> Link to init file </li>
 						</ul>
 						<a class="image" href="img/style.png" target="_blank">
 							<img width="35%" height="auto" src="img/style.png" alt="Tree">
@@ -316,27 +316,27 @@
 					</section>
 
 					<section>
-						<h2>1 - check deps </h2>
+						<h2>1 - Check deps </h2>
 						<ul>
-							Inside resources/stylesheets folder there are two folders:
-							<li> custom: wich are located every style file made by us </li>
-							<li> vendors: wich are located every external css lib that our code need </li>
+							Inside <c>'resources/stylesheets'</c> folder there are two folders:
+							<li> <c>custom </c> : wich are located every style file <c>made by us</c> </li>
+							<li> <c>vendors </c> : wich are located every <c>external css lib</c> that our code need </li>
 						</ul>
 						<p> So, if you have to import external css, place it into resources/stylesheets/vendors<p>
 						<div class="arrow animated bounce"></div>
 					</section>
 
 					<section>
-						<h2>2 - create a file inside /custom </h2>
-						<p> create a file inside resources/stylesheets/custom folder and wrap it using a div</p>
+						<h2>2 - Create a file inside /custom </h2>
+						<p> Create a file inside <c>'resources/stylesheets/custom'</c> folder and wrap it using a div</p>
 						<div class="arrow animated bounce"></div>
 					</section>
 
 					<section>
-						<h2>3 - link to init file</h2>
+						<h2>3 - Link to init file</h2>
 						<ul>Inside resources/stylesheets folder there are two files:
-							<li> new_sytle: listed some scss file located on custom folder and use BOOTSTRAP v3 to generate new_style.css </li>
-							<li> old_sytle: listed some scss file located on custom folder and use BOOTSTRAP v2 to generate old_style.css </li>
+							<li> <c>new_sytle </c> : listed some scss file located on custom folder and use <c>BOOTSTRAP v3</c> to generate <c>new_style.css</c></li>
+							<li> <c>old_sytle</c>: listed some scss file located on custom folder and use <c>BOOTSTRAP v2</c> to generate <c>old_style.css</c> </li>
 						</ul>
 
 					</section>
@@ -351,9 +351,9 @@
 							grunt test
 						</code></pre>
 						<ul>
-							<li>its our proof/evidence that our code works properly</li>
-							<li>its a way to avoid future unexpected problems</li>
-							<li>run in a controlled environment</li>
+							<li>It is our <c>proof/evidence</c> that our code works properly</li>
+							<li>Also, is a way to <c>avoid future</c> unexpected <c>problems</c></li>
+							<li>It runs in a <c>controlled environment</c></li>
 						</ul>
 						<div class="arrow animated bounce"></div>
 					</section>
@@ -361,7 +361,7 @@
 					<section>
 						<h2> Generating a Spec </h2>
 						<p>
-							Inside 'test/spec' are listed all tthe backbone applications that right now exist, just create another folder and using require call your new aplication and start to add tests!
+							Inside <c>'test/spec'</c> are listed all tthe backbone applications that right now exist, just create another folder and using require call your new aplication and start to add tests!
 						</p>
 						<a class="image" href="img/test_tree.png" target="_blank">
 							<img width="35%" height="auto" src="img/test_tree.png" alt="Tree">
@@ -386,20 +386,20 @@
 							<li>Download external deps/libs using <c>Bower</c></li>
 							<li>Genarting Html files from <c>jade/handlebars</c></li>
 							<li>Generating style files from scss (<c>sass</c>)</li>
-							<li>evaluating JS code syntax using <c>JsHint</c></li>
-							<li>evaluating JS code works using <c>Jasmine</c></li>
-							<li>compress and uglify every js files in order to generate main-built using <c>requireJs</c></li>
+							<li>Evaluating JS code syntax using <c>JsHint</c></li>
+							<li>Evaluating JS code works using <c>Jasmine</c></li>
+							<li>Compress and uglify every js files in order to generate main-built using <c>requireJs</c></li>
 							<li>Generating documentation using <c>Yuidoc</c></li>
 							<li><c>Clean</c> workspace</li>
 						</ul>
 						<div class="arrow animated bounce"></div>
 					</section>
 					<section>
-						<h2> main task </h2>
+						<h2> Main tasks </h2>
 						<table>
 							<thead>
 								<tr>
-									<th> command </th>
+									<th> Command </th>
 
 									<th> Bower </th>
 									<th> template </th>
@@ -533,7 +533,6 @@
 						</table>
 
 					</section>
-
 				</section>
 
 				<!-- Creating a new Doc file -->
@@ -542,7 +541,7 @@
 					<section>
 						<h2>Documentation </h2>
 						<p>
-							Inside 'resources/js-documentation' exist a file named 'index.html' where you could see every comment that appears on js files.
+							Inside <c>'resources/js-documentation'</c> exist a file named <c>'index.html'</c> where you could see every comment that appears on js files.
 						</p>
 					</section>
 				</section>
@@ -550,6 +549,7 @@
 				<section>
 					<h1>THE END</h1>
 					<h3><a href="http://ayxos.com">BY Marco A. Pajares</a></h3>
+					<p>Skype: marco.pajares</p>
 				</section>
 
 			</div>
