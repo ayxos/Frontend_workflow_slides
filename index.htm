@@ -284,6 +284,204 @@
 							<p></p></aside><p></p>
 
 					</section>
+					
+					<section>
+						<h2> Main Git commands </h2>
+						<table>
+							<thead>
+								<tr>
+									<th> Command </th>
+									<th> Task </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git clone [remote_URL]
+										</code></pre>
+									</td>
+									<td>
+										clone the remote repo on your local machine	
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git pull origin [branch_Name]
+										</code></pre>
+									</td>
+
+									<td> update branch (like synchronize)
+										
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git checkout -b [branch_name]
+										</code></pre>
+									</td>
+
+									<td> create a new branch </td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git checkout [branch_name]
+										</code></pre>
+									</td>
+
+									<td> move to another branch </td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git status
+										</code></pre>
+									</td>
+
+									<td> list changes that have been made and ready to push </td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git add/rm [file_path]
+										</code></pre>
+									</td>
+
+									<td> add/remove new files to commit </td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git commit -am [Message]
+										</code></pre>
+									</td>
+									<td> index your changes </td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git push origin [branch_name]
+										</code></pre>
+									</td>
+
+									<td> push to remote branch </td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git reset --hard
+										</code></pre>
+									</td>
+
+									<td> revert to initial state (if something fails) </td>
+								</tr>
+							</tbody>
+						</table>
+
+					</section>
+					
+					
+					<section>
+						<h2> Another useful Git commands </h2>
+						<table>
+							<thead>
+								<tr>
+									<th> Command </th>
+									<th> Task </th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git log
+										</code></pre>
+									</td>
+									<td>
+										show history commits	
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git diff [commit_hash] [commit_hash]
+										</code></pre>
+									</td>
+									<td>
+										show diff between commits	
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git stash
+										</code></pre>
+									</td>
+
+									<td> Stash the changes in a dirty working directory away (DO before git pull)
+										
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git stash pop
+										</code></pre>
+									</td>
+
+									<td> apply changes on stash branch in your current branch (DO after git pull) </td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git checkout -t [branch_name]
+										</code></pre>
+									</td>
+
+									<td> download a branch that only exist on remote </td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git branch -d [branch_name]
+										</code></pre>
+									</td>
+
+									<td> delete a LOCAL branch </td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git checkout [commit_hash] [file_path]
+										</code></pre>
+									</td>
+
+									<td> revert specific file to a previous commit </td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git tag -a [tag_version] -m [tag_message]
+										</code></pre>
+									</td>
+									<td> index your changes </td>
+								</tr>
+								<tr>
+									<td>
+										<pre class="grunt"><code data-trim contenteditable>
+											git push origin [tag_name]
+										</code></pre>
+									</td>
+
+									<td> push a tag to remote branch </td>
+								</tr>
+							</tbody>
+						</table>
+
+					</section>
 				
 				</section>
 				
