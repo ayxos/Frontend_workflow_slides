@@ -72,11 +72,6 @@
 				</section>
 				
 				<section data-background="grey">
-				
-					<section class="cover past" data-index-h="0" style="top: -298px; display: block;" hidden="">
-						<h1 contenteditable="">Foundations Class</h1>
-						<div class="pseudoLink" contenteditable="">https://training.github.com/kit</div>
-					</section>
 					
 					<section class="present" style="top: -122px; display: block;">
 						<h2>Local repository</h2>
@@ -94,26 +89,6 @@
 								<li>Craft file versions</li>
 								<li>Create branches</li>
 							</ul>
-					</section>
-					
-					<section class="present" style="top: -153px; display: block;">
-						<h2>History synchronization</h2>
-						<h3></h3>
-						<div class="clear-all"></div>
-						
-						<p></p><aside class="notes"><p></p>
-						
-						<p>Notes placeholder</p>
-						
-						<p></p></aside><p></p>
-						
-						<pre>
-							<code>
-								$ git pull --rebase
-								$ git push origin [master|branch]
-							</code>
-						</pre>
-
 					</section>
 					
 					<section class="present" style="top: -303.5px; display: block;">
@@ -297,86 +272,86 @@
 							<tbody>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git clone [remote_URL]
 										</code></pre>
 									</td>
-									<td>
+									<td class="task">
 										clone the remote repo on your local machine	
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git pull origin [branch_Name]
 										</code></pre>
 									</td>
 
-									<td> update branch (like synchronize)
+									<td class="task"> update branch (like synchronize)
 										
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git checkout -b [branch_name]
 										</code></pre>
 									</td>
 
-									<td> create a new branch </td>
+									<td class="task"> create a new branch </td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git checkout [branch_name]
 										</code></pre>
 									</td>
 
-									<td> move to another branch </td>
+									<td class="task"> move to another branch </td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git status
 										</code></pre>
 									</td>
 
-									<td> list changes that have been made and ready to push </td>
+									<td class="task"> list changes that have been made and ready to push </td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git add/rm [file_path]
 										</code></pre>
 									</td>
 
-									<td> add/remove new files to commit </td>
+									<td class="task"> add/remove new files to commit </td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git commit -am [Message]
 										</code></pre>
 									</td>
-									<td> index your changes </td>
+									<td class="task"> index your changes </td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git push origin [branch_name]
 										</code></pre>
 									</td>
 
-									<td> push to remote branch </td>
+									<td class="task"> push to remote branch </td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git reset --hard
 										</code></pre>
 									</td>
 
-									<td> revert to initial state (if something fails) </td>
+									<td class="task"> revert to initial state (if something fails) </td>
 								</tr>
 							</tbody>
 						</table>
@@ -396,87 +371,87 @@
 							<tbody>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git log
 										</code></pre>
 									</td>
-									<td>
+									<td class="task">
 										show history commits	
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git diff [commit_hash] [commit_hash]
 										</code></pre>
 									</td>
-									<td>
+									<td class="task">
 										show diff between commits	
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git stash
 										</code></pre>
 									</td>
 
-									<td> Stash the changes in a dirty working directory away (DO before git pull)
+									<td class="task"> Stash the changes in a dirty working directory away (DO before git pull)
 										
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git stash pop
 										</code></pre>
 									</td>
 
-									<td> apply changes on stash branch in your current branch (DO after git pull) </td>
+									<td class="task"> apply changes on stash branch in your current branch (DO after git pull) </td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git checkout -t [branch_name]
 										</code></pre>
 									</td>
 
-									<td> download a branch that only exist on remote </td>
+									<td class="task"> download a branch that only exist on remote </td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git branch -d [branch_name]
 										</code></pre>
 									</td>
 
-									<td> delete a LOCAL branch </td>
+									<td class="task"> delete a LOCAL branch </td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git checkout [commit_hash] [file_path]
 										</code></pre>
 									</td>
 
-									<td> revert specific file to a previous commit </td>
+									<td class="task"> revert specific file to a previous commit </td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git tag -a [tag_version] -m [tag_message]
 										</code></pre>
 									</td>
-									<td> index your changes </td>
+									<td class="task"> index your changes </td>
 								</tr>
 								<tr>
 									<td>
-										<pre class="grunt"><code data-trim contenteditable>
+										<pre class="git"><code data-trim contenteditable>
 											git push origin [tag_name]
 										</code></pre>
 									</td>
 
-									<td> push a tag to remote branch </td>
+									<td class="task"> push a tag to remote branch </td>
 								</tr>
 							</tbody>
 						</table>
